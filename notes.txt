@@ -1,0 +1,25 @@
+class
+id
+difference id,class
+
+1. color
+2. background
+
+3. height
+4. width
+5. measurement units
+    pixel
+    percentage
+6. border
+    units border-style color  /* border style solid, dashed, dotted */
+
+7. text decoration
+    span
+    text-align
+    word-spacing
+    letter-spacing
+8. Box Model
+
+9. Box sizing
+    box-sizing:border-box;
+    box-sizing:content-box;  ==default
