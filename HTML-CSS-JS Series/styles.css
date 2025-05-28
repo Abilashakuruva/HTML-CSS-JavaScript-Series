@@ -98,10 +98,15 @@ nav ul li:active {
     padding: 20px;
 }
 
+.dark-theme{
+    color: #ffff;
+}
+
 .dark-theme:hover {
     background-color: #1768AC;
     padding: 10px;
     border-radius: 10px;
+    color: #ffff;
 }
 
 .main {
@@ -159,6 +164,7 @@ nav ul li:active {
 
 #loginBtn {
     cursor: pointer;
+    color: #ffff;
 }
 
 .login-modal {
