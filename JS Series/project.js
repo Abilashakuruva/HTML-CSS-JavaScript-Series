@@ -43,8 +43,8 @@
 //  console.log(apple)  //undefined
 
 //  let fruits=['apple','mango','55',{name:'Abilasha'}]
-//  console.log(fruits)   //['apple','mango','55',{name:'Abilasha'}]
-//  console.log(typeof fruits) //object
+// //  console.log(fruits)   //['apple','mango','55',{name:'Abilasha'}]
+//  console.log(typeof(fruits)) //object
 //  console.log(Array.isArray(fruits)) //true
 
 //  const games={
@@ -52,7 +52,7 @@
 //     football:'racer'
 //  }
 //  console.log(games)   //{cricket:'Dhoni',football:'racer'}
-//  console.log(typeof games)  //object
+//  console.log(typeof(games))  //object
 
  //variables
  //operators
@@ -130,7 +130,7 @@ confirm
 //     document.write("hello madam."+ name +" welcome to my page")
 // }else{
 //     let name=prompt("please enter your name");
-//     document.write("hello madam."+ name +" welcome to my page")
+//     document.write("hello sir."+ name +" welcome to my page")
 // }                                         // hello madam.Abi welcome to my page
 
 /*type conversion*/
@@ -604,25 +604,27 @@ function openSideNavBar(){
 */
 
 
+/* -----------------------------------------------------------------*/
+
 // DateMethod
 // const toDay=new Date()
-// document.write(toDay)
-// document.write(toDay.getDate())
-// document.write(toDay.getMonth()+1)
-// document.write(toDay.getFullYear())
+// document.write(toDay)                //Sat Aug 23 2025 14:57:39 GMT+0530 (India Standard Time)
+// document.write(toDay.getDate())      //23
+// document.write(toDay.getMonth()+1)   //8
+// document.write(toDay.getFullYear())     //2025
 
-// toDay.setDate(10)
-// toDay.setMonth(10)
-// toDay.setFullYear(2026)
+// toDay.setDate(10)       //Sun Aug 10 2025 15:00:04 GMT+0530 (India Standard Time)
+// toDay.setMonth(10)      //Sun Nov 23 2025 15:01:00 GMT+0530 (India Standard Time)
+// toDay.setFullYear(2026)    //Sun Aug 23 2026 15:02:07 GMT+0530 (India Standard Time)
 // document.write(toDay)
 
 //Math method
-// const calculation=Math.ceil(10.53)  //11
-// const calculation=Math.floor(10.99)  //10
-// const calculation=Math.round(11.53)   //12
-// const calculation=Math.max(12,55,890,5582,11545)  //11545
-// const calculation=Math.random()*10  //9.1736
-// const calculation= Math.floor(Math.random()*10)+1  //2
+// const calculation=Math.ceil(10.53)                    //11
+// const calculation=Math.floor(10.99)                   //10
+// const calculation=Math.round(11.53)                   //12
+// const calculation=Math.max(12,55,890,5582,11545)      //11545
+// const calculation=Math.random()*10                    //9.1736
+// const calculation= Math.floor(Math.random()*10)+1     //2
 // document.write("<h1> Calculation: ",calculation)
 
 // array
@@ -639,6 +641,8 @@ function openSideNavBar(){
 //     }
 // }
 // document.write(capitals.India)  //NewDelhi
+
+/*-------------------------------------------------------------------------*/
 
 //setinterval and clearinterval
 // const Animator=setInterval(sampleAnimation,1000)
