@@ -1,0 +1,22 @@
+// Count vowels in a string.
+// let s="javascript"
+// let vowels=s.match(/[aeiou]/gi);
+// console.log(vowels? vowels.length:0);    //3
+
+// Count consonants in a string.
+// let consonants=s.match(/[^aeiou\s]/gi)
+// console.log(consonants? consonants.length:0);  //7
+
+// Remove spaces from a string.
+// console.log("Hello World JS".replace(/\s/g, "")); //HelloWorldJS
+
+// Replace all occurrences of "Java" with "JS" in a string.
+// console.log("I love Java and Java is fun".replace(/Java/g, "JS")); //I love JS and JS is fun
+
+// Count the number of words in a string.
+// let sentence = "I love JavaScript";
+// console.log(sentence.trim().split(/\s+/).length);  //3
+
+// Remove punctuation from a string.
+// let punctStr = "Hello, world!";
+// console.log(punctStr.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " "));     //Hello world

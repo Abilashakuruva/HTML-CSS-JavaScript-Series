@@ -1,4 +1,4 @@
-// Convert number to string and string to number.
+/* Convert number to string and string to number. */
 // let num=12
 // let strnum=String(num); //"12"
 // console.log(strnum)
@@ -6,44 +6,44 @@
 // console.log(backtonum)
 // console.log(typeof(strnum),typeof(backtonum)) //string number
 
-// square root
+/* square root */
 // console.log(Math.sqrt(81)); //9
 
-// Round to 2 decimals
+/* Round to 2 decimals */
 // console.log(Math.round(3.14159)) //3
 // console.log((3.14159).toFixed(2)) //3.14
 
-// create object
+/* create object */
 // let student={
 //     name:"Abhi",
 //     age:25,
 //     marks:90
 // };
 // console.log(student) //{name: 'Abhi', age: 25, marks: 90}
-// // access & modify properties
+/* access & modify properties */
 // student.age=26;
 // console.log(student.age) //26
 // // loop througth keys & values
 // for (let key in student){
 //     console.log(key,student[key]);
 // }  //name Abhi
-// //check if property exist
+/* check if property exist */
 // console.log("marks" in student) //true
-// //convert object to key-value pairs
+/* convert object to key-value pairs */
 // console.log(Object.entries(student));  // [ ['name','Abhi'], ['age',26], ['marks',90] ]
 
-// arrow function to double num
+/* arrow function to double num */
 // let double = num => num * 2;
-// console.log(double(4)); // 8
+// console.log(double(4));         // 8
 
-// function with default parameters
+/*  function with default parameters */
 // function greet(name = "Guest") {
 //     console.log(`Hello, ${name}`);
 // }
 // greet(); // Hello, Guest
 // greet("Abhi"); // Hello, Abhi
 
-// loop througth an array
+/* loop througth an array  */
 // let colors=["Red","Green","Blue"]
 // for (let color of colors){
 //     console.log(color)
@@ -118,16 +118,20 @@
 // let inc=5
 // inc+=1
 // console.log(inc) //6
+
 // Decrement a number by 1 without using --.
 // let desc=5
 // desc-=1
 // console.log(desc) //4
+
 // Calculate the area of a rectangle.
 // let l=4,b=5;
 // console.log(l*b) //20
+
 // Calculate the perimeter of a rectangle.
 // let l=4,b=5;
 // console.log(2*(l+b)) //18
+
 // Calculate the area of a circle.
 // let r=5
 // console.log(Math.PI*r*r)  //78.539
@@ -176,7 +180,6 @@
 // let lengthCount = 0;
 // for (let _ of text) lengthCount++;
 // console.log(lengthCount);      //5
-// console.log("hello".length)    //5
 
 // Count the number of words in a string.
 // let sentence = "I love JavaScript";
@@ -189,7 +192,6 @@
 // let myStr="hello";
 // console.log(myStr[myStr.length-1]);   //o
  
-
 // Check if a string contains a specific word.
 // console.log("I love JS".includes("JS"));  //true
 
@@ -204,15 +206,17 @@
 // console.log("JavaScript".substring(0, 4)); // "Java"
 
 // Find the ASCII value of a character.
-// console.log("A".charCodeAt(0));  //65
+// console.log("A".charCodeAt());  //65
 
 // Convert a number to a string.
 // let num1 = 123;
-// console.log(num1.toString()); //"123"
+// // console.log(num1.toString()); //"123"
+// console.log(String(num1))   //"123"
 
 // Convert a string to a number.
 // let numStr = "456";
-// console.log(Number(numStr)); //456
+// // console.log(Number(numStr)); //456
+// console.log(parseInt(numStr))  //456
 
 // Remove punctuation from a string.
 // let punctStr = "Hello, world!";
@@ -276,12 +280,13 @@
 // Check if a number is an Armstrong number.
 // let armnum=153,total=0,temp=armnum;
 // let digits=(String(armnum).length)
-// // console.log(digits)
+// // console.log(digits)    //3
 // while(temp>0){
 //     let digit=temp%10;
 //     total+=digit ** digits;
 //     temp=Math.floor(temp/10);
 // }
+// // console.log(total)    //153
 // console.log(total===armnum)  //true
 
 // Check if a number is a perfect number.
@@ -308,7 +313,7 @@
 // console.log((10).toString(2));  //1010
 
 // Convert binary to decimal.
-// console.log(parseInt("1010", 2));  //10
+// console.log(parseInt("1010",2));  //10
 
 // Convert decimal to hexadecimal.
 // console.log((255).toString(16));   //ff
@@ -328,7 +333,7 @@
 //   count++;
 //   numCount = Math.floor(numCount / 10);
 // }
-// console.log(count);
+// console.log(count);     //6
 // 2nd method
 // console.log(String(numCount).length)   //6
 
@@ -351,14 +356,13 @@
 // console.log(sum/arr.length);  //5.2
 
 // Remove duplicates from an array.
-// let dupArr = [1, 2, 2, 3,3, 4, 4,5,5,6,6,7,7,8,8,9,9];
+// let dupArr = [1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9];
 // console.log([...new Set(dupArr)]);     //[1,2,3,4,5,6,7,8,9]
 
 // Sort an array in ascending order.
 // let nums=[5,2,9,1]
 // nums.sort()
 // console.log(nums)   //[1,2,5,9]
-
 
 // Sort an array in descending order.
 // let nums=[5,2,9,1]
@@ -371,12 +375,12 @@
 
 // Check if an array contains a specific element.
 // let arr = [3, 7, 2, 9, 5];
-// console.log(arr.includes(7));
+// console.log(arr.includes(7));    //true
 
 // Find the index of an element in an array.
-// console.log(arr.indexOf(9));
+// console.log(arr.indexOf(9));    //true
 
-// Merge two arrays. or merge arrays without duplicates-
+// Merge two arrays or merge arrays without duplicates-
 // let arr1=[1,2,3]
 // let arr2=[3,4,5]
 // // let merged=[...new Set([...arr1,...arr2])];
@@ -419,6 +423,7 @@
 // nums.sort((a,b)=>b-a)
 // console.log(nums)      //[9, 7, 5, 3, 2]  //[9,5,2,1]  
 // console.log(nums[1])  //7     //5
+
 // Find the second smallest number in an array.
 // let nums=[3, 7, 2, 9, 5];  //[5,2,9,1]
 // nums.sort()
@@ -568,4 +573,65 @@
 // console.log(calculator(10, 5, '*'));  //50
 // console.log(calculator(10, 5, '/'));  //2
 
-for (let i=1; i<=5; i++) console.log("* ".repeat(i));
+/* triange pattern */
+// for (let i=1; i<=5; i++) console.log("* ".repeat(i));
+
+// arr=[1,4,3,2,6,5] remove number 3 in js
+// let arr = [1, 4, 3, 2, 6, 5];
+// arr = arr.filter(num => num !== 3);
+// console.log(arr); // [1, 4, 2, 6, 5]
+// 2nd method (Find index first and then remove)
+// let arr = [1, 4, 3, 2, 6, 5];
+// let index = arr.indexOf(3);
+// if (index !== -1) {
+//   arr.splice(index, 1);
+// }
+// console.log(arr); // [1, 4, 2, 6, 5]
+
+//sum of array elements
+// function sumArray(arr) {
+//   return arr.reduce((sum, num) => sum + num, 0);
+// }
+// console.log(sumArray([1, 2, 3, 4])); // 10
+
+//first non repeating character
+// function firstUniqueChar(str) {
+//   for (let char of str) {
+//     if (str.indexOf(char) === str.lastIndexOf(char)) return char;
+//   }
+//   return null;
+// }
+// console.log(firstUniqueChar("aabbccd")); // "d"
+
+//anagram
+// function isAnagram(str1, str2) {
+//   return str1.split('').sort().join('') === str2.split('').sort().join('');
+// }
+// console.log(isAnagram("listen", "silent")); // true
+
+//count occurance of each character
+// function countChars(str) {
+//   const result = {};
+//   for (let char of str) {
+//     result[char] = (result[char] || 0) + 1;
+//   }
+//   return result;
+// }
+// console.log(countChars("hello")); // { h:1, e:1, l:2, o:1 }
+
+//Write a function that returns two arrays – one with even numbers, one with odd numbers.
+// function separateEvenOdd(arr) {
+//   let even = [], odd = [];
+//   for (let num of arr) {
+//     if (num % 2 === 0) {
+//       even.push(num);
+//     } else {
+//       odd.push(num);
+//     }
+//   }
+//   return { even, odd };
+// }
+
+// const result = separateEvenOdd([10, 3, 5, 8, 9]);
+// console.log(result.even); // [10, 8]
+// console.log(result.odd);  // [3, 5, 9]

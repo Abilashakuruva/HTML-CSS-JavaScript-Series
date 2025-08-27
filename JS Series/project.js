@@ -301,18 +301,19 @@ confirm
 // var myteam=team.join('***')
 // document.write(myteam)   //10***20***30***40***suni***madhav***devi
 
-//7.slice():returns a shallow copy of a portion of an array into a new array
+//7.slice():extracts characters between start and end
 // let students=['anil','ramesh','sudheer',10,20,30]
 // let mystudents=students.slice(2,6)
 // document.write(mystudents)  //sudheer,10,20,30
 
 //8.splice():changes the content of an array by removing,replacing or adding element
 // let mynumbers=[0,1,2,3,4,5,6,7,8]
-// let mynewnumbers=mynumbers.splice(3,0,'added value')
-// document.write(mynumbers+'<br>')   //0,1,2,added value,3,4,5,6,7,8
-// // document.write(mynewnumbers)
+// // let mynewnumbers=mynumbers.splice(0,5)  /*remove*/  //o/p: 5,6,7,8
+// // let mynewnumbers=mynumbers.splice(0,4,"something to see")  /*replace*/  //o/p: something to see,4,5,6,7,8
+// let mynewnumbers=mynumbers.splice(3,0,'added value')  /*added*/  //o/p: //0,1,2,added value,3,4,5,6,7,8
+// document.write(mynumbers+'<br>')   
 
-//9.indexof():returns the first index at which a given element can be found in an array or -4 if it is not present
+//9.indexof():returns the first index at which a given element can be found in an array or -1 if it is not present
 // let students=['anil','devi','suresh','mahesh']
 // document.write(students.indexOf('mahesh'))     //3
 
@@ -366,6 +367,13 @@ confirm
 // console.log(text.replace(/ /g, "-")); // Hello-World-JS
 
 // substring(): slice and substring same but it swaps the values. negative treated as 0
+// let str = "JavaScript";
+
+// console.log(str.substring(0, 4));   // "Java"
+// console.log(str.substring(4, 10));  // "Script"
+// console.log(str.substring(4));      // "Script"
+// console.log(str.substring(5, 2));   // "va" (2 and 5 are swapped)
+// console.log(str.substring(-3, 4));  // "Java" (negative treated as 0)
 
 //loops
 //for-loop: run a block of code for each item in a sequence
@@ -623,6 +631,7 @@ function openSideNavBar(){
 // const calculation=Math.floor(10.99)                   //10
 // const calculation=Math.round(11.53)                   //12
 // const calculation=Math.max(12,55,890,5582,11545)      //11545
+// const calculation=Math.min(12,55,890,5582,11545)      //12
 // const calculation=Math.random()*10                    //9.1736
 // const calculation= Math.floor(Math.random()*10)+1     //2
 // document.write("<h1> Calculation: ",calculation)
