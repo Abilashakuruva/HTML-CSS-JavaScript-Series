@@ -1423,4 +1423,4 @@
 // for (let i = 1; i <= length; i++) {
 //     table.push(number * i);
 // }
-// console.log(table);
+// console.log(table);   //[7, 14, 21, 28, 35]
