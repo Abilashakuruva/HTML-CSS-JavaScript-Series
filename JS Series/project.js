@@ -296,28 +296,28 @@ confirm
 // let newplayers=scores.concat(players)
 // document.write(newplayers)  //11,22,33,44,55,amith,suresh,mahesh
 
-//6.join():create a new string by concatenating all the elements of an array and return a string by specified separator
+//6.join():array convert to string and return a string by specified separator
 // var team=[10,20,30,40,'suni','madhav','devi']
 // var myteam=team.join('***')
 // document.write(myteam)   //10***20***30***40***suni***madhav***devi
 
-//7.slice():extracts characters between start and end
+//7.slice(): extracts characters between start and end
 // let students=['anil','ramesh','sudheer',10,20,30]
 // let mystudents=students.slice(2,6)
 // document.write(mystudents)  //sudheer,10,20,30
 
-//8.splice():changes the content of an array by removing,replacing or adding element
+//8.splice(): removing,replacing or adding element of an array 
 // let mynumbers=[0,1,2,3,4,5,6,7,8]
 // // let mynewnumbers=mynumbers.splice(0,5)  /*remove*/  //o/p: 5,6,7,8
 // // let mynewnumbers=mynumbers.splice(0,4,"something to see")  /*replace*/  //o/p: something to see,4,5,6,7,8
 // let mynewnumbers=mynumbers.splice(3,0,'added value')  /*added*/  //o/p: //0,1,2,added value,3,4,5,6,7,8
 // document.write(mynumbers+'<br>')   
 
-//9.indexof():returns the first index at which a given element can be found in an array or -1 if it is not present
+//9.indexof():find index of 1st occurrence or -1 if it is not present
 // let students=['anil','devi','suresh','mahesh']
 // document.write(students.indexOf('mahesh'))     //3
 
-//10.forEach():excutes a provided function once for each array
+//10.forEach(): loop througth array
 // let scores=[10,20,30,40,50]
 // let students=['suresh','murali','nagaraju','harish']
 // students.forEach(function(item,index){
@@ -326,6 +326,36 @@ confirm
 // scores.forEach(function(apple){
 //     document.write(apple*2+'<br>')
 // })  //20  40  60   80   100
+
+/*searching */
+// includes() → Check if value exists
+// let a=[1, 2, 3]
+// console.log(a.includes(2) )// true
+
+//lastIndexOf() → Find last occurrence
+// let a=[1, 2, 3, 2]
+// console.log(a.lastIndexOf(2)); // 3
+
+//find() → Return first element that matches
+// let a=[10, 20, 30]
+// console.log(a.find(x => x > 15)); // 20
+
+// findIndex() → Return index of first match
+// let a=[10, 20, 30]
+// console.log(a.findIndex(x => x > 15)); // 1
+
+/*Iteration / Looping*/
+// map() → Transform array
+// let a=[1, 2, 3]
+// console.log(a.map(x => x * 2)); // [2, 4, 6]
+
+// filter() → Filter items
+// let a=[1, 2, 3, 4]
+// console.log(a.filter(x => x % 2 === 0)); // [2, 4]
+
+// reduce() → Reduce to single value
+//let a=[1, 2, 3, 4]
+// console.log(a.reduce((sum, x) => sum + x, 0)); // 10
 
 //multidemensional array*/
 // let marks=[
