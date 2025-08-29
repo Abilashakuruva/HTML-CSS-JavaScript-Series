@@ -1290,6 +1290,7 @@
 
 
 
+<<<<<<< HEAD
 // ---------------------------------------------------------------------------------------------------------------------------
 
 
@@ -1307,3 +1308,13 @@
 
 
 
+=======
+//Multiplication Table in Array
+// let number = 7;
+// let length = 5; // how many multiples you want
+// let table = [];
+// for (let i = 1; i <= length; i++) {
+//     table.push(number * i);
+// }
+// console.log(table);   //[7, 14, 21, 28, 35]
+>>>>>>> 6e4fec31f4e8a34f0947323c7589988b471aa150
