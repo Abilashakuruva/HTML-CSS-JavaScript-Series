@@ -700,7 +700,7 @@
 //     console.log(n+"X"+i+"="+(n*i))
 // }
 
-//Multiplication Table in Array
+//Multiplication Table num,length in Array
 // let number = 7;
 // let length = 5; // how many multiples you want
 // let table = [];
@@ -947,7 +947,6 @@
 // console.log(countFrequency("programming")); // { p:1, r:2, o:1, g:2, a:1, m:2, i:1, n:1 }
 // console.log(countFrequency(122333)); // { '1':1, '2':2, '3':3 }
 
-
 // Check if a number is prime.
 // let num = 7;
 // let isPrime = num > 1;
@@ -956,6 +955,7 @@
 // }
 // console.log(isPrime);  //true
 
+// check prime in function
 // function isPrime(n){
 //     if(n<=1) return false;
 //     for(let i=2;i<n;i++){
@@ -965,6 +965,7 @@
 // }
 // console.log(isPrime(7))  //true
 
+// give range prime(first),count,sum
 // let count = 0, sum=0;
 // for (let n = 10; n <= 30; n++) {
 //     let prime = true;
@@ -997,6 +998,7 @@
 // }
 // console.log(repeated) // ['1', '2', '3']  //['r', 'g', 'm']
 
+// function in repeated num/string(first only)
 // function repeatedchar(str){
 // let freq={} , repeated=[];
 // for(let char of str){
@@ -1286,7 +1288,7 @@
 //   console.log(`(${pair[0]}, ${pair[1]})`); // (2, 5) (4, 3) (6, 1)
 // }
 
-
+//--------------------------------       End          ------------------------------------------------
 
 
 
