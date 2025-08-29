@@ -49,19 +49,6 @@
 //     console.log(color)
 // }
 
-//multiplication table nested loop
-// for (let i=1;i<=20;i++){
-//     for(let j=1;j<=10;j++){
-//         console.log(`${i}X${j}=${i*j}`);
-//     }
-//     console.log("-------------------")
-// }
-
-// let n=5;
-// for(let i=1;i<=10;i++){
-//     console.log(n+"X"+i+"="+(n*i))
-// }
-
 // Print "Hello, World!" to the console.
 // console.log("Hello World!");  //Hello World!
 
@@ -170,27 +157,27 @@
 // console.log("HELLO".toLowerCase());  //hello
 
 // Remove spaces from a string.
-// console.log("Hello World JS".replace(/\s/g, "")); //HelloWorldJS
+// console.log("Hello World JS".replaceAll(" ", "")); //HelloWorldJS
 
 // Replace all occurrences of "Java" with "JS" in a string.
-// console.log("I love Java and Java is fun".replace(/Java/g, "JS")); //I love JS and JS is fun
+// console.log("I love Java and Java is fun".replaceAll("Java", "JS")); //I love JS and JS is fun
 
 // Find the length of a string without using .length.
-// let text = "hello";
-// let lengthCount = 0;
+// let text = "hello" , lengthCount = 0;
 // for (let _ of text) lengthCount++;
 // console.log(lengthCount);      //5
 
 // Count the number of words in a string.
 // let sentence = "I love JavaScript";
-// console.log(sentence.trim().split(/\s+/).length);  //3
+// console.log(sentence.split(/\s+/).length);  //3
 
 // Find the first character of a string.
 // console.log("hello"[0]);  //h
 
 // Find the last character of a string.
 // let myStr="hello";
-// console.log(myStr[myStr.length-1]);   //o
+// // console.log(myStr[myStr.length-1]);   //o
+// console.log(myStr.at(-1)) //o
  
 // Check if a string contains a specific word.
 // console.log("I love JS".includes("JS"));  //true
@@ -230,7 +217,7 @@
 // console.log(Math.min(a, b, c));           //10
 
 // Check if a number is prime.
-// let num = 29;
+// let num = 7;
 // let isPrime = num > 1;
 // for (let i = 2; i <= Math.sqrt(num); i++) {
 //   if (num % i === 0) { isPrime = false; break; }
@@ -288,6 +275,19 @@
 // }
 // // console.log(total)    //153
 // console.log(total===armnum)  //true
+
+// function isArmstrong(armnum) {
+//      let digits=(String(armnum).length)
+//   let total = 0 ,temp=armnum;
+//   while(temp>0){
+//     let digit=temp%10;
+//     total+=digit ** digits;
+//     temp=Math.floor(temp/10);
+// }
+//   return total === armnum;
+// }
+// console.log(isArmstrong(153)); // true
+// console.log(isArmstrong(9474)); // true
 
 // Check if a number is a perfect number.
 // let perNum = 28, perSum = 0;
@@ -350,6 +350,12 @@
 // let sum = arr.reduce((a, b) => a + b, 0);
 // console.log(sum);  //26
 
+//sum of array elements
+// function sumArray(arr) {
+//   return arr.reduce((sum, num) => sum + num, 0);
+// }
+// console.log(sumArray([1, 2, 3, 4])); // 10
+
 // Calculate the average of numbers in an array.
 // let arr = [3, 7, 2, 9, 5];
 // let sum = arr.reduce((a, b) => a + b, 0);
@@ -397,7 +403,6 @@
 //  let someres=books.pop()
 //  document.write(books+ '</br>')   //maths,chemistry
 //  document.write('Deleted by pop method is '+ someres)  //Deleted by pop method is physics
-
 
 // Add an element at the beginning of an array.
 // let scores=[22,69,58,74,45,65,'amar']
@@ -576,67 +581,7 @@
 /* triange pattern */
 // for (let i=1; i<=5; i++) console.log("* ".repeat(i));
 
-// arr=[1,4,3,2,6,5] remove number 3 in js
-// let arr = [1, 4, 3, 2, 6, 5];
-// arr = arr.filter(num => num !== 3);
-// console.log(arr); // [1, 4, 2, 6, 5]
-// 2nd method (Find index first and then remove)
-// let arr = [1, 4, 3, 2, 6, 5];
-// let index = arr.indexOf(3);
-// if (index !== -1) {
-//   arr.splice(index, 1);
-// }
-// console.log(arr); // [1, 4, 2, 6, 5]
-
-//sum of array elements
-// function sumArray(arr) {
-//   return arr.reduce((sum, num) => sum + num, 0);
-// }
-// console.log(sumArray([1, 2, 3, 4])); // 10
-
-//first non repeating character
-// function firstUniqueChar(str) {
-//   for (let char of str) {
-//     if (str.indexOf(char) === str.lastIndexOf(char)) return char;
-//   }
-//   return null;
-// }
-// console.log(firstUniqueChar("aabbccd")); // "d"
-
-//anagram
-// function isAnagram(str1, str2) {
-//   return str1.split('').sort().join('') === str2.split('').sort().join('');
-// }
-// console.log(isAnagram("listen", "silent")); // true
-
-//count occurance of each character
-// function countChars(str) {
-//   const result = {};
-//   for (let char of str) {
-//     result[char] = (result[char] || 0) + 1;
-//   }
-//   return result;
-// }
-// console.log(countChars("hello")); // { h:1, e:1, l:2, o:1 }
-
-//Write a function that returns two arrays – one with even numbers, one with odd numbers.
-// function separateEvenOdd(arr) {
-//   let even = [], odd = [];
-//   for (let num of arr) {
-//     if (num % 2 === 0) {
-//       even.push(num);
-//     } else {
-//       odd.push(num);
-//     }
-//   }
-//   return { even, odd };
-// }
-
-// const result = separateEvenOdd([10, 3, 5, 8, 9]);
-// console.log(result.even); // [10, 8]
-// console.log(result.odd);  // [3, 5, 9]
-
-// ---------------------------shortnotes------------------------------------------------
+// -------------------------------  shortnotes   -------------------------------------------------------------
 
 //reverse string
 // let str = "hello";
@@ -660,7 +605,6 @@
 //     return reversed;
 // }
 // console.log(reverseString("hello")); // "olleh"
-// console.log(reverseString("javascript")); // "tpircsavaj"
 
 //reverse Number
 // let num = 12345;
@@ -688,141 +632,7 @@
 //   return reversed;
 // }
 // console.log(reverseNumber(12345)); // 54321
-// console.log(reverseNumber(9870));  // 789
 
-/* Repeated Characters in a String/number */
-// function findRepeatedChars(str) {
-// let freq = {};
-// let repeated = [];
-// for (let char of str) {
-//     freq[char] = (freq[char] || 0) + 1;
-// }
-// for (let key in freq) {
-//     if (freq[key] > 1) {
-//         repeated.push(key);
-//     }
-//     }
-//     return repeated;
-// }
-// console.log(findRepeatedChars("programming")); // ["r","g","m"]
-// console.log(findRepeatedChars("hello")); // ["l"]
-// function findRepeatedDigits(num) {
-//     let str = num.toString();
-//     return findRepeatedChars(str);
-// }
-// console.log(findRepeatedDigits(11223345)); // ["1","2","3"]
-
-/* Non-Repeated Characters in a String/number */
-// function findNonRepeatedChars(str) {
-//     let freq = {};
-//     let nonRepeated = [];
-//     for (let char of str) {
-//         freq[char] = (freq[char] || 0) + 1;
-//     }
-//     for (let key in freq) {
-//         if (freq[key] === 1) {
-//             nonRepeated.push(key);
-//         }
-//     }
-//     return nonRepeated;
-// }
-// console.log(findNonRepeatedChars("programming")); // ["p","o","a","i","n"]
-// console.log(findNonRepeatedChars("hello")); // ["h","e","o"]
-// function findNonRepeatedDigits(num) {
-//     let str = num.toString();
-//     return findNonRepeatedChars(str);
-// }
-// console.log(findNonRepeatedDigits(11223345)); // ["4","5"]
-
-/* first Non-Repeated(unique) Characters in a String */
-// let str = "swiss";
-// let freq = {};
-// count
-// for (let ch of str) {
-//     freq[ch] = (freq[ch] || 0) + 1;
-// }
-// // check
-// let nonRepeat = null;
-// for (let ch of str) {
-//     if (freq[ch] === 1) {
-//         nonRepeat = ch;
-//         break;
-//     }
-// }
-// console.log(nonRepeat); // w
-
-/* function first Non-Repeated(unique) Characters in a String/number*/
-// function firstNonRepeatedChar(str) {
-//     let freq = {};
-//     // Count frequency
-//     for (let char of str) {
-//         freq[char] = (freq[char] || 0) + 1;
-//     }
-//     // Return first char with count = 1
-//     for (let char of str) {
-//         if (freq[char] === 1) {
-//             return char;
-//         }
-//     }
-//     return null; // If none found
-// }
-// console.log(firstNonRepeatedChar("swiss")); // "w"
-// console.log(firstNonRepeatedChar("programming")); // "p"
-// console.log(firstNonRepeatedChar("aabbcc")); // null
-
-// function firstNonRepeatedDigit(num) {
-//     return firstNonRepeatedChar(num.toString());
-// }
-// console.log(firstNonRepeatedDigit(11223345)); // "4"
-// console.log(firstNonRepeatedDigit(98766789)); // null
-
-/* first Repeated(duplicate) Characters in a String */
-// let str2 = "programming";
-// let seen = new Set();
-// let repeat = null;
-// for (let ch of str2) {
-//     if (seen.has(ch)) {
-//         repeat = ch;
-//         break;
-//     }
-//     seen.add(ch);
-// }
-// console.log(repeat); // r
-
-/* first Repeated(duplicate) Characters in a number */
-// let num = 11223345;
-// let numStr = num.toString();
-// let seenNum = new Set();
-// let firstRepeatNum = null;
-// for (let ch of numStr) {
-//     if (seenNum.has(ch)) {
-//         firstRepeatNum = ch;
-//         break;
-//     }
-//     seenNum.add(ch);
-// }
-// console.log(firstRepeatNum); // 1
-
-/* function first Repeated(duplicate) Characters in a String/number */
-// function firstRepeatedChar(str) {
-//     let seen = new Set();
-//     for (let char of str) {
-//         if (seen.has(char)) {
-//             return char; // Found first repeat
-//         }
-//         seen.add(char);
-//     }
-//     return null; // If no repeat
-// }
-// console.log(firstRepeatedChar("swiss")); // "s"
-// console.log(firstRepeatedChar("programming")); // "r"
-// console.log(firstRepeatedChar("abcd")); // null
-// function firstRepeatedDigit(num) {
-//     return firstRepeatedChar(num.toString());
-// }
-// console.log(firstRepeatedDigit(11223345)); // "1"
-// console.log(firstRepeatedDigit(98766789)); // "6"
-// console.log(firstRepeatedDigit(123456)); // null
 
 //Anagram (two words have same letters)
 // let str1 = "listen";
@@ -855,30 +665,137 @@
 //   let rev = str.split("").reverse().join("");
 //   return str === rev;
 // }
-
 // console.log(isPalindrome("madam")); // true
 // console.log(isPalindrome(121));     // true
 
-// Armstrong Number (153 → 1³ + 5³ + 3³ = 153)
-// let num = 153;
-// let str = num.toString();
-// let sum = 0;
-// for (let ch of str) {
-//   sum += Math.pow(Number(ch), str.length);
+//factorial
+// let n = 5;
+// let fact = 1;
+// for (let i = 1; i <= n; i++) {
+//     fact *= i;
 // }
-// console.log(sum === num); // true
+// console.log(fact); // 120
 
-//function Armstrong
-// function isArmstrong(num) {
-//   let str = num.toString();
-//   let sum = 0;
-//   for (let d of str) {
-//     sum += Math.pow(Number(d), str.length);
+// function factorial
+// function factorial(n) {
+//   let fact = 1;
+//   for (let i = 1; i <= n; i++) {
+//     fact *= i;
 //   }
-//   return sum === num;
+//   return fact;
 // }
-// console.log(isArmstrong(153)); // true
-// console.log(isArmstrong(9474)); // true
+// console.log(factorial(5)); // 120
+
+//multiplication table nested loop
+// for (let i = 1; i <= 20; i++) {
+//     for (let j = 1; j <= 10; j++) {
+//         console.log(`${i}X${j}=${i*j}`);
+//     }
+//     console.log("-------------------")
+// }
+
+//multiplication table 
+// let n=5;
+// for(let i=1;i<=10;i++){
+//     console.log(n+"X"+i+"="+(n*i))
+// }
+
+//Multiplication Table in Array
+// let number = 7;
+// let length = 5; // how many multiples you want
+// let table = [];
+// for (let i = 1; i <= length; i++) {
+//     table.push(number * i);
+// }
+// console.log(table); //[7, 14, 21, 28, 35]
+
+//count vowels
+// let str = "Hello World";
+// let vowels = "aeiouAEIOU";
+// let count = 0;
+// for (let i = 0; i < str.length; i++) {
+//   if (vowels.includes(str[i])) {
+//     count++;
+    //    console.log("vowel:",str[i]) //e,o,o
+//   }
+// }
+// console.log("Vowel Count:", count); //3
+
+//function count vowels
+// function countVowels(str) {
+//   let vowels = "aeiouAEIOU";
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       count++;
+        //  console.log("vowel:",str[i]) //e,o,o
+//     }
+//   }
+//   return count;
+// }
+// console.log("Vowel Count:", countVowels("Hello World")); //3
+
+// remove vowels
+// let str3 = "Hello World";
+// let vowels3 = "aeiouAEIOU";
+// let result = "";
+// for (let i = 0; i < str3.length; i++) {
+//   if (!vowels3.includes(str3[i])) {
+//     result += str3[i];
+//   }
+// }
+// console.log("String without vowels:", result); //Hll Wrld
+
+// function remove Vowels
+// function removeVowels(str) {
+//   let vowels = "aeiouAEIOU";
+//   let result = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (!vowels.includes(str[i])) {
+//       result += str[i];
+//     }
+//   }
+//   return result;
+// }
+// console.log("String without vowels:", removeVowels("Hello World"));
+
+// count/sum of digits of a number.
+// let nums = 1234, total = 0,count = 0;
+// console.log(String(nums).length) //4
+// while (nums > 0) {
+//     total += nums % 10;
+//     count++;
+//     nums = Math.floor(nums / 10);
+// }
+// console.log(total) //10
+// console.log(count); //4
+
+// 2nd method without math
+// let num = 12345; // number to check
+// let str = num.toString(); // convert number to string
+// let count = str.length;
+// let sum = 0;
+// for (let i = 0; i < str.length; i++) {
+//     sum += Number(str[i]);
+// }
+// console.log("Number of digits:", count); //5
+// console.log("Sum of digits:", sum); //15
+
+// Function to count digits
+// function countDigits(num) {
+//     return num.toString().length;
+// }
+// function sumDigits(num) {
+//     let str = num.toString();
+//     let sum = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         sum += Number(str[i]);
+//     }
+//     return sum;
+// }
+// let number = 12345;
+// console.log("Number of digits:", countDigits(number));
+// console.log("Sum of digits:", sumDigits(number));
 
 // leap year
 // let year = 2024;
@@ -889,21 +806,43 @@
 // function isLeapYear(year) {
 //   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 // }
-
 // console.log(isLeapYear(2000)); // true
 // console.log(isLeapYear(1900)); // false
 
 // ASCII value
-// let ch = "A";
-// console.log(ch.charCodeAt(0)); // 65
+// console.log("A".charCodeAt()); // 65
 
 // function ASCII
 // function getAscii(ch) {
-//   return ch.charCodeAt(0);
+//   return ch.charCodeAt();
 // }
-
 // console.log(getAscii("A")); // 65
 // console.log(getAscii("7")); // 55
+
+// Check if a number is an Armstrong number.
+// let armnum=153,total=0,temp=armnum;
+// let digits=(String(armnum).length)
+// // console.log(digits)    //3
+// while(temp>0){
+//     let digit=temp%10;
+//     total+=digit ** digits;
+//     temp=Math.floor(temp/10);
+// }
+// // console.log(total)    //153
+// console.log(total===armnum)  //true
+
+// function isArmstrong(armnum) {
+//      let digits=(String(armnum).length)
+//   let total = 0 ,temp=armnum;
+//   while(temp>0){
+//     let digit=temp%10;
+//     total+=digit ** digits;
+//     temp=Math.floor(temp/10);
+// }
+//   return total === armnum;
+// }
+// console.log(isArmstrong(153)); // true
+// console.log(isArmstrong(9474)); // true
 
 // Longest Word in a Sentence
 // let sentence = "JavaScript is powerful language";
@@ -937,26 +876,47 @@
 //   }
 //   return longest;
 // }
-
 // console.log(longestWord("I love programming in JavaScript")); // "programming"
 
-//factorial
-// let n = 5;
-// let fact = 1;
-// for (let i = 1; i <= n; i++) {
-//     fact *= i;
+// count frequency of words
+// let sentence="This is a test this is simple test"
+// words=sentence.split(/\s/)
+// console.log(words)  // ['This', 'is', 'a', 'test', 'this', 'is', 'simple', 'test']
+// wordcount={}
+// for (let word of words){
+//     word=word.toLowerCase();
+//     console.log(word)
+//     if (word in wordcount){
+//         wordcount[word]+=1    
+//     }else{
+//         wordcount[word]=1
+//     }
 // }
-// console.log(fact); // 120
+// console.log(wordcount)  //{this: 2, is: 2, a: 1, test: 2, simple: 1}
+// for (let[word,count] of Object.entries(wordcount)){
+//     console.log(`${word}:${count}`)
+// }
 
-// function factorial
-// function factorial(n) {
-//   let fact = 1;
-//   for (let i = 1; i <= n; i++) {
-//     fact *= i;
-//   }
-//   return fact;
+// count occurance(repeated num count)
+// let nums=[1,2,2,3,2,4], target=2, count=0;
+// for (let i of nums){
+//     if (i===target) {
+//             count++
+//     }
 // }
-// console.log(factorial(5)); // 120
+// console.log(count)  //3
+
+//Count Frequency of Characters
+// let text = "banana";
+// let charcount = {};
+// for (let char of text) {
+//     if(char in charcount){
+//         charcount[char]+=1
+//     }else{
+//         charcount[char]=1
+//     }
+// }
+// console.log(charcount); // { b:1, a:3, n:2 }
 
 //Count Frequency of Characters
 // let text = "banana";
@@ -987,6 +947,7 @@
 // console.log(countFrequency("programming")); // { p:1, r:2, o:1, g:2, a:1, m:2, i:1, n:1 }
 // console.log(countFrequency(122333)); // { '1':1, '2':2, '3':3 }
 
+
 // Check if a number is prime.
 // let num = 7;
 // let isPrime = num > 1;
@@ -1004,43 +965,191 @@
 // }
 // console.log(isPrime(7))  //true
 
-// Print all prime numbers from 10 to 30.
+// let count = 0, sum=0;
 // for (let n = 10; n <= 30; n++) {
-//   let prime = true;
-//   for (let i = 2; i <= Math.sqrt(n); i++) {
-//     if (n % i === 0) { prime = false; break; }
+//     let prime = true;
+//     for (let i = 2; i <= Math.sqrt(n); i++) {
+//         if (n % i === 0) {
+//             prime = false;
+//             break;
+//         }
+//     }
+//     if (prime){ console.log(n), count++, sum+=n;
+//         // console.log(n)
+//         // break
+//     } ;      
+// }
+// console.log("primecount:",count); //6
+// console.log("primesum:",sum); //112
+
+// repeated num/string(first only)
+// let str="programming",nums=11223345;
+// str=nums.toString()  
+// let freq={} , repeated=[];
+// for(let char of str){
+//     freq[char]=(freq[char]||0)+1
+// }
+// for (let key in freq){
+//     if(freq[key]>1){
+//         // console.log(repeated=key); break;  //first repeated only  //r //1
+//         repeated.push(key)
+//     }
+// }
+// console.log(repeated) // ['1', '2', '3']  //['r', 'g', 'm']
+
+// function repeatedchar(str){
+// let freq={} , repeated=[];
+// for(let char of str){
+//     freq[char]=(freq[char]||0)+1
+// }
+// for (let key in freq){
+//     if(freq[key]>1){
+//         repeated=key; break;  //first repeated only  //r //1
+//         repeated.push(key)
+//     }
+// }
+// return repeated
+// }
+// // console.log(repeatedchar("programming")) // ['r', 'g', 'm']
+// function repeatedDigits(nums){
+//     let str=nums.toString()
+//     return repeatedchar(str);  
+// }
+// console.log(repeatedDigits(11223345)) //['1', '2', '3']
+
+// Nonrepeated num/string(first only)
+// function Nonrepeatedchar(str){
+// let freq={} , Nonrepeated=[];
+// for(let char of str){
+//     freq[char]=(freq[char]||0)+1
+// }
+// for (let key in freq){
+//     if(freq[key]===1){
+//         // Nonrepeated=key; break;  //first Nonrepeated only  //p //4
+//         Nonrepeated.push(key)
+//     }
+// }
+// return Nonrepeated
+// }
+// // console.log(Nonrepeatedchar("programming")) // ['p', 'o', 'a', 'i', 'n']
+// function NonrepeatedDigits(nums){
+//     let str=nums.toString()
+//     return Nonrepeatedchar(str);  
+// }
+// console.log(NonrepeatedDigits(11223345)) //['4', '5']
+
+// arr=[1,4,3,2,6,5] remove number 3 in js
+// let arr = [1, 4, 3, 2, 6, 5];
+// arr = arr.filter(num => num !== 3);
+// console.log(arr); // [1, 4, 2, 6, 5]
+
+// 2nd method (Find index first and then remove)
+// let arr = [1, 4, 3, 2, 6, 5];
+// let index = arr.indexOf(3);
+// console.log(index)  //2
+// if (index !== -1) {
+//   arr.splice(index, 1);
+// }
+// console.log(arr); // [1, 4, 2, 6, 5]
+
+//check even number
+// let num = 17;  // you can change the number odd
+// if (num % 2 === 0) {
+//     console.log(num + " is Even");
+// } else {
+//     console.log(num + " is Odd");
+// }
+
+//Even & Odd Operations
+// let arr = [12, 7, 45, 8, 22, 9, 33, 56, 2];
+// arr=[...arr].sort((a,b)=>a-b)
+// sorted=[...arr].sort((a,b)=>b-a)
+// console.log(arr) //[2, 7, 8, 9, 12, 22, 33, 45, 56]
+// console.log(sorted) //[56, 45, 33, 22, 12, 9, 8, 7, 2]
+// let even = [];
+// let odd = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//         even.push(arr[i]);
+//         // console.log(even)    //2 first even num
+//         // break
+//      } else {
+//         odd.push(arr[i]);
+//         // console.log(odd)    //7 first odd num
+//         // break
 //   }
-//   if (prime) console.log(n);
 // }
+// console.log("Even Numbers:", even);  //[12, 8, 22, 56, 2]
+// console.log("Odd Numbers:", odd);    //[7, 45, 9, 33]
 
+// let evenCount = even.length;       
+// let oddCount = odd.length;
+// console.log("Even Count:", evenCount);   //5
+// console.log("Odd Count:", oddCount);   //4
 
-// count of prime numbers
-// let count = 0;
-// for (let n = 10; n <= 30; n++) {
-//     let prime = true;
-//     for (let i = 2; i <= Math.sqrt(n); i++) {
-//         if (n % i === 0) {
-//             prime = false;
-//             break;
-//         }
-//     }
-//     if (prime) count++;
+// let evenSum = 0 , oddSum = 0;
+// for (let i = 0; i < even.length; i++) {
+//     evenSum += even[i];
 // }
-// console.log(count); //6
-
-// sum of prime numbers
-// let sum = 0;
-// for (let n = 10; n <= 30; n++) {
-//     let prime = true;
-//     for (let i = 2; i <= Math.sqrt(n); i++) {
-//         if (n % i === 0) {
-//             prime = false;
-//             break;
-//         }
-//     }
-//     if (prime) sum += n;
+// for (let i = 0; i < odd.length; i++) {
+//     oddSum += odd[i];
 // }
-// console.log(sum); //112
+// console.log("Even Sum:", evenSum);    //100
+// console.log("Odd Sum:", oddSum);  //94
+
+// let evenAvg = evenCount > 0 ? evenSum / evenCount : 0;
+// let oddAvg = oddCount > 0 ? oddSum / oddCount : 0;
+// console.log("Even Avg:", evenAvg);    //20
+// console.log("Odd Avg:", oddAvg);    //23.5
+
+// let evenMax = Math.max(...even);
+// let evenMin = Math.min(...even);
+// let oddMax = Math.max(...odd);
+// let oddMin = Math.min(...odd);
+// console.log("Even Max,Even Min:", evenMax,evenMin);   //56 2
+// console.log("Odd Max,Odd Min:", oddMax,oddMin);     //45 7
+
+// let evenSorted = [...even].sort((a, b) => a - b);  
+// let oddSorted = [...odd].sort((a, b) => a - b);
+// let evenSort = [...even].sort((a, b) => b - a);  
+// let oddSort = [...odd].sort((a, b) => b- a);
+// console.log("Even Sorted:", evenSorted);   //[2, 8, 12, 22, 56]
+// console.log("Odd Sorted:", oddSorted);   //[7, 9, 33, 45]
+// console.log("Even Sort:", evenSort);   //[56, 22, 12, 8, 2]
+// console.log("Odd Sort:", oddSort);   //[45, 33, 9, 7]
+
+// let evenSecondLargest = evenSorted.length > 1 ? evenSorted[evenSorted.length - 2] : null;
+// let oddSecondLargest = oddSorted.length > 1 ? oddSorted[oddSorted.length - 2] : null;
+// console.log("Even Second Largest:", evenSecondLargest);    //22
+// console.log("Odd Second Largest:", oddSecondLargest);     //33
+
+// let evenSecondSmallest = evenSorted.length > 1 ? evenSorted[1] : null;
+// let oddSecondSmallest = oddSorted.length > 1 ? oddSorted[1] : null;
+// console.log("Even Second Smallest:", evenSecondSmallest);  //8
+// console.log("Odd Second Smallest:", oddSecondSmallest);  //9
+
+// function even/odd num
+// function EvenOdd(arr){
+//     let even = [];
+//     let odd = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             even.push(arr[i]);
+//         // console.log(even)    //2 first even num
+//         // break
+//      } else {
+//         odd.push(arr[i]);
+//         // console.log(odd)    //7 first odd num
+//         // break
+//   }
+// }
+// return{ even,odd};
+// }
+// let arr = [12, 7, 45, 8, 22, 9, 33, 56, 2];
+// arr=[...arr].sort((a,b)=>a-b)
+// let res=EvenOdd(arr)
+// console.log(res.even);  //[2, 8, 12, 22, 56]
+// console.log(res.odd);    //[7, 9, 33, 45]
 
 //Fibonacci Series (till n terms)
 // let fibN = 10, fib = [0, 1];
@@ -1049,13 +1158,25 @@
 // }
 // console.log(fib);  //[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
+//Largest, Second Largest, Smallest, Second Smallest (Using sort())
+// let arr = [12, 45, 7, 89, 23, 56];
+// arr.sort((a, b) => a - b);  // // Sort array ascending
+// let smallest = arr[0];
+// let secondSmallest = arr[1];
+// let largest = arr[arr.length - 1];
+// let secondLargest = arr[arr.length - 2];
+// console.log("Smallest Number:", smallest);               //7
+// console.log("Second Smallest Number:", secondSmallest);   //12
+// console.log("Largest Number:", largest);                     //89
+// console.log("Second Largest Number:", secondLargest);      //56
+
 // Find Largest and Smallest, Second Largest and Second Smallest (Without Function)
 // let arr = [12, 45, 7, 89, 23, 56];
 // let largest = arr[0];
 // let secondLargest = -Infinity;
 // let smallest = arr[0];
 // let secondSmallest = Infinity;
-// Loop through array
+//           // Loop through array
 // for (let i = 0; i < arr.length; i++) {
 //     let num = arr[i];
 //     // Largest & Second Largest
@@ -1073,23 +1194,10 @@
 //         secondSmallest = num;
 //     }
 // }
-// console.log("Largest Number:", largest);
-// console.log("Second Largest Number:", secondLargest);
-// console.log("Smallest Number:", smallest);
-// console.log("Second Smallest Number:", secondSmallest);
-
-//Largest, Second Largest, Smallest, Second Smallest (Using sort())
-// let arr = [12, 45, 7, 89, 23, 56];
-// // Sort array ascending
-// arr.sort((a, b) => a - b);
-// let smallest = arr[0];
-// let secondSmallest = arr[1];
-// let largest = arr[arr.length - 1];
-// let secondLargest = arr[arr.length - 2];
-// console.log("Smallest Number:", smallest);
-// console.log("Second Smallest Number:", secondSmallest);
-// console.log("Largest Number:", largest);
-// console.log("Second Largest Number:", secondLargest);
+// console.log("Largest Number:", largest);  //89
+// console.log("Second Largest Number:", secondLargest); //56
+// console.log("Smallest Number:", smallest);  //7
+// console.log("Second Smallest Number:", secondSmallest); //12
 
 //Largest & Second Largest, Smallest & Second Smallest (with function)
 // function findLargestAndSecondLargest(arr) {
@@ -1101,7 +1209,6 @@
 //         secondLargest
 //     };
 // }
-
 // function findSmallestAndSecondSmallest(arr) {
 //     arr.sort((a, b) => a - b); // ascending order
 //     let smallest = arr[0];
@@ -1116,246 +1223,49 @@
 //     largest,
 //     secondLargest
 // } = findLargestAndSecondLargest([...numbers]);
-// console.log("Largest:", largest);
-// console.log("Second Largest:", secondLargest);
+// console.log("Largest:", largest); //89
+// console.log("Second Largest:", secondLargest); //56
 // let {
 //     smallest,
 //     secondSmallest
 // } = findSmallestAndSecondSmallest([...numbers]);
-// console.log("Smallest:", smallest);
-// console.log("Second Smallest:", secondSmallest);
+// console.log("Smallest:", smallest); //7
+// console.log("Second Smallest:", secondSmallest); //12
 
-//count vowels
-// let str = "Hello World";
-// let vowels = "aeiouAEIOU";
-// let count = 0;
-// for (let i = 0; i < str.length; i++) {
-//   if (vowels.includes(str[i])) {
-//     count++;
-//   }
-// }
-// console.log("Vowel Count:", count); //3
-
-//function count vowels
-// function countVowels(str) {
-//   let vowels = "aeiouAEIOU";
-//   let count = 0;
-//   for (let i = 0; i < str.length; i++) {
-//     if (vowels.includes(str[i])) {
-//       count++;
-//     }
-//   }
-//   return count;
-// }
-// console.log("Vowel Count:", countVowels("Hello World")); //3
-
-// print vowels
-// let str2 = "Hello World";
-// let vowels2 = "aeiouAEIOU";
-// for (let i = 0; i < str2.length; i++) {
-//   if (vowels2.includes(str2[i])) {
-//     console.log("Vowel:", str2[i]);  //e,o,o
-//   }
-// }
-
-//function print vowels
-// function printVowels(str) {
-//   let vowels = "aeiouAEIOU";
-//   for (let i = 0; i < str.length; i++) {
-//     if (vowels.includes(str[i])) {
-//       console.log("Vowel:", str[i]);
-//     }
-//   }
-// }
-// printVowels("Hello World");
-
-// remove vowels
-// let str3 = "Hello World";
-// let vowels3 = "aeiouAEIOU";
-// let result = "";
-
-// for (let i = 0; i < str3.length; i++) {
-//   if (!vowels3.includes(str3[i])) {
-//     result += str3[i];
-//   }
-// }
-// console.log("String without vowels:", result); //Hll Wrld
-
-// function remove Vowels
-// function removeVowels(str) {
-//   let vowels = "aeiouAEIOU";
-//   let result = "";
-//   for (let i = 0; i < str.length; i++) {
-//     if (!vowels.includes(str[i])) {
-//       result += str[i];
-//     }
-//   }
-//   return result;
-// }
-// console.log("String without vowels:", removeVowels("Hello World"));
-
-//check even number
-// let num = 17;  // you can change the number odd
-// if (num % 2 === 0) {
-//     console.log(num + " is Even");
-// } else {
-//     console.log(num + " is Odd");
-// }
-
-//Even & Odd Operations
-// let arr = [12, 7, 45, 8, 22, 9, 33, 56, 2];
-// let even = [];
-// let odd = [];
-// // Separate Even & Odd
+//array given to pair
+// let arr = [1, 2, 3, 4];
 // for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] % 2 === 0) {
-//         even.push(arr[i]);
-//     } else {
-//         odd.push(arr[i]);
+//     for (let j = i + 1; j < arr.length; j++) {
+//         console.log(`(${arr[i]}, ${arr[j]})`);  // (1, 2) (1, 3) (1, 4) (2, 3) (2, 4) (3, 4)
 //     }
 // }
-// Even calculations
-// let evenCount = even.length;
-// let evenSum = 0;
-// for (let i = 0; i < even.length; i++) {
-//     evenSum += even[i];
-// }
-// let evenAvg = evenCount > 0 ? evenSum / evenCount : 0;
-// let evenMax = Math.max(...even);
-// let evenMin = Math.min(...even);
-// let evenSorted = [...even].sort((a, b) => a - b);
-// let evenSecondSmallest = evenSorted.length > 1 ? evenSorted[1] : null;
-// let evenSecondLargest = evenSorted.length > 1 ? evenSorted[evenSorted.length - 2] : null;
-// // Odd calculations
-// let oddCount = odd.length;
-// let oddSum = 0;
-// for (let i = 0; i < odd.length; i++) {
-//     oddSum += odd[i];
-// }
-// let oddAvg = oddCount > 0 ? oddSum / oddCount : 0;
-// let oddMax = Math.max(...odd);
-// let oddMin = Math.min(...odd);
-// let oddSorted = [...odd].sort((a, b) => a - b);
-// let oddSecondSmallest = oddSorted.length > 1 ? oddSorted[1] : null;
-// let oddSecondLargest = oddSorted.length > 1 ? oddSorted[oddSorted.length - 2] : null;
-// // Print Results
-// console.log("Even Numbers:", even);
-// console.log("Even Count:", evenCount);
-// console.log("Even Sum:", evenSum);
-// console.log("Even Avg:", evenAvg);
-// console.log("Even Max:", evenMax);
-// console.log("Even Min:", evenMin);
-// console.log("Even Sorted:", evenSorted);
-// console.log("Even Second Smallest:", evenSecondSmallest);
-// console.log("Even Second Largest:", evenSecondLargest);
-// console.log("\nOdd Numbers:", odd);
-// console.log("Odd Count:", oddCount);
-// console.log("Odd Sum:", oddSum);
-// console.log("Odd Avg:", oddAvg);
-// console.log("Odd Max:", oddMax);
-// console.log("Odd Min:", oddMin);
-// console.log("Odd Sorted:", oddSorted);
-// console.log("Odd Second Smallest:", oddSecondSmallest);
-// console.log("Odd Second Largest:", oddSecondLargest);
 
-//Function for Even & Odd Operations
-// function analyzeEvenOdd(arr) {
-//     let even = [];
-//     let odd = []; // Separate Even & Odd
+//function array given to pair
+// function getAllPairs(arr) {
+//     let pairs = [];
 //     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] % 2 === 0) {
-//             even.push(arr[i]);
-//         } else {
-//             odd.push(arr[i]);
+//         for (let j = i + 1; j < arr.length; j++) {
+//             pairs.push([arr[i], arr[j]]);
 //         }
 //     }
-
-//     function stats(nums) {
-//         if (nums.length === 0) return null;
-//         let count = nums.length;
-//         let sum = nums.reduce((a, b) => a + b, 0);
-//         let avg = sum / count;
-//         let max = Math.max(...nums);
-//         let min = Math.min(...nums);
-//         let sorted = [...nums].sort((a, b) => a - b);
-//         let secondSmallest = sorted[1] ?? null;
-//         let secondLargest = sorted[sorted.length - 2] ?? null;
-//         return {
-//             nums,
-//             count,
-//             sum,
-//             avg,
-//             max,
-//             min,
-//             sorted,
-//             secondSmallest,
-//             secondLargest
-//         };
-//     }
-//     return {
-//         even: stats(even),
-//         odd: stats(odd)
-//     };
+//     return pairs;
 // }
-// let numbers = [12, 7, 45, 8, 22, 9, 33, 56, 2];
-// let result = analyzeEvenOdd(numbers);
-// console.log("Even Numbers Analysis:", result.even);
-// console.log("Odd Numbers Analysis:", result.odd);
-
-// count/sum of digits of a number.
-// let nums = 1234,
-//     total = 0,
-//     count = 0;
-// // 2nd method
-// console.log(String(nums).length) //4
-// while (nums > 0) {
-//     total += nums % 10;
-//     count++;
-//     nums = Math.floor(nums / 10);
+// let numbers = [1, 2, 3, 4];
+// let result = getAllPairs(numbers);
+// for (let pair of result) {
+//     console.log(`(${pair[0]}, ${pair[1]})`);  // (1, 2) (1, 3) (1, 4) (2, 3) (2, 4) (3, 4)
 // }
-// console.log(total) //10
-// console.log(count); //4
-
-// let num = 12345; // number to check
-// let str = num.toString(); // convert number to string
-// // Count digits
-// let count = str.length;
-// // Sum digits
-// let sum = 0;
-// for (let i = 0; i < str.length; i++) {
-//     sum += Number(str[i]);
-// }
-// console.log("Number of digits:", count); //5
-// console.log("Sum of digits:", sum); //15
-
-// Function to count digits
-// function countDigits(num) {
-//     return num.toString().length;
-// }
-
-// function sumDigits(num) {
-//     let str = num.toString();
-//     let sum = 0;
-//     for (let i = 0; i < str.length; i++) {
-//         sum += Number(str[i]);
-//     }
-//     return sum;
-// }
-// let number = 12345;
-// console.log("Number of digits:", countDigits(number));
-// console.log("Sum of digits:", sumDigits(number));
 
 //array, target number given pair equal to target
 // let arr = [2, 4, 3, 5, 7, 6, 1];
 // let target = 7;
-// console.log("Pairs with sum =", target, ":");
 // for (let i = 0; i < arr.length; i++) {
 //     for (let j = i + 1; j < arr.length; j++) {
 //         if (arr[i] + arr[j] === target) {
-//             console.log(`(${arr[i]}, ${arr[j]})`);
+//             console.log(`(${arr[i]}, ${arr[j]})`); // (2, 5) (4, 3) (6, 1)
 //         }
 //     }
-// }
+// } 
 
 //array, target number given pair equal to target
 // function findPairs(arr, target) {
@@ -1372,55 +1282,28 @@
 // let numbers = [2, 4, 3, 5, 7, 6, 1];
 // let targetSum = 7;
 // let result = findPairs(numbers, targetSum);
-// console.log(`Pairs with sum ${targetSum}:`);
 // for (let pair of result) {
-//   console.log(`(${pair[0]}, ${pair[1]})`);
+//   console.log(`(${pair[0]}, ${pair[1]})`); // (2, 5) (4, 3) (6, 1)
 // }
 
-//array given to pair
-// let arr = [1, 2, 3, 4];
-// for (let i = 0; i < arr.length; i++) {
-//     for (let j = i + 1; j < arr.length; j++) {
-//         console.log(`(${arr[i]}, ${arr[j]})`);
-//     }
-// }
 
-//function array given to pair
-// function getAllPairs(arr) {
-//     let pairs = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let j = i + 1; j < arr.length; j++) {
-//             pairs.push([arr[i], arr[j]]);
-//         }
-//     }
-//     return pairs;
-// }
-// let numbers = [1, 2, 3, 4];
-// let result = getAllPairs(numbers);
-// console.log("All possible pairs:");
-// for (let pair of result) {
-//     console.log(`(${pair[0]}, ${pair[1]})`);
-// }
 
-//multiplication table nested loop
-// for (let i = 1; i <= 20; i++) {
-//     for (let j = 1; j <= 10; j++) {
-//         console.log(`${i}X${j}=${i*j}`);
-//     }
-//     console.log("-------------------")
-// }
 
-//multiplication table 
-// let n=5;
-// for(let i=1;i<=10;i++){
-//     console.log(n+"X"+i+"="+(n*i))
-// }
 
-//Multiplication Table in Array
-// let number = 7;
-// let length = 5; // how many multiples you want
-// let table = [];
-// for (let i = 1; i <= length; i++) {
-//     table.push(number * i);
-// }
-// console.log(table);
+// ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
